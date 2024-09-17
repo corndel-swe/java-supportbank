@@ -10,7 +10,7 @@ the steps required to get this repo working.
 completed, because the testing tools haven't been installed yet!)
 
 - [ ] Read the docs on
-      [Creating a Maven project](https://tech-docs.corndel.com/java/maven.html).
+      [Creating a Maven project](https://tech-docs.corndel.com/java/creating-projects.html).
 
 - [ ]
 
