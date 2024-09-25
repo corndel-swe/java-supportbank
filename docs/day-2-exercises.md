@@ -1,76 +1,68 @@
 # Day 2 Exercises
 
-## Exercise 1: Async and Await
+## Exercise 1: Throwing errors
 
-In this exercise, you'll be working with a set of functions that simulate making
-breakfast. It's a bit of a contrived example, but it's a good way to illustrate
-the concept.
+In this exercise, we'll be working with `exercises/UserId.java`. This class can
+be used like so:
 
-To run the tests for this exercise, use `npm run test:d2e1`.
+```java
+String id = new UserId("abcd123");
+boolean isValid = id.validate();
+```
 
-- [ ] Have a look at the
-      [Async and Await](https://tech-docs.corndel.com/js/async-await.html)
-      documentation for this exercise.
+- [ ] Read the docs on
+      [Handling Errors](https://tech-docs.corndel.com/java/handling-errors.html)
 
-- [ ] Inside [exercises/breakfast.js](/exercises/breakfast.js), you'll find a
-      function `makeToast()`. All that's missing are some `async` and `await`
-      keywords. You'll need to use `await` to wait for the `toaster.toast()`
-      function to finish.
+- [ ] In `UserId.java`, follow the instructions to throw errors with the correct
+      messages under different conditions.
 
-- [ ] Similar to the first part, you'll find a function `makeCoffee()` inside
-      [exercises/breakfast.js](/exercises/breakfast.js). Again, all that's
-      missing are some `async` and `await` keywords.
+- [ ] Make sure to test, commit and push!
 
-- [ ] Finally, you'll find a function `makeBreakfast()` inside
-      [exercises/breakfast.js](/exercises/breakfast.js). This function should
-      create a `toast` and `coffee` and return them. Make sure you `await` them,
-      and pass them any arguments they need.
+## Exercise 2: File I/O
 
-## Exercise 2: Error Handling
+In this exercise, we'll be working in `exercises/Adder.java` to add together all
+the numbers in a file such as `src/data/nums.txt`. Each row contains a single
+integer.
 
-In this exercise, we'll be creating functionality that checks the validity of a
-`id` string according to certain criteria.
-
-To run the tests for this exercise, use `npm run test:d2e2`.
-
-- [ ] Have a look at the
-      [Error Handling](https://tech-docs.corndel.com/js/handling-errors.html)
-      documentation for this exercise.
-
-- [ ] Implement the `validateId` function inside
-      [exercises/validateId.js](/exercises/validateId.js).
-
-Now that we've written a function that throws a bunch of errors, we'll write a
-function that catches them.
-
-- [ ] Implement the function `isIdValid()` inside
-      [exercises/validateId.js](/exercises/validateId.js). It should:
-
-  - `try` to call `validateId` on the `id`
-
-  - if `id` is valid (i.e. no error is thrown by `validateId`), it should return
-    `true`.
-
-  - if `id` is not valid (i.e. an error is thrown by `validateId`), it should:
-
-    - `catch` the error,
-
-    - call `logger.error(message)` with a useful message.
-
-    - return `false`.
+- [ ] Have a look at
+      [Reading and Writing Files](https://tech-docs.corndel.com/java/file-io.html).
 
 > [!IMPORTANT]
 >
-> `logger` is an object which is passed in to `validateId` - it is a custom
-> logger, so use `logger.error` instead of `console.log`.
+> We will follow the convention that the input files are located in the
+> `src/data` directory (or a subdirectory). When constructing your filepath, you
+> should construct it as "src/data/fileName" like we do in the docs.
 
-## Exercise 3: File I/O
+- [ ] In `Adder,java`, complete the `add` method to return the sum of the
+      numbers in the given file. There are hints in the file to follow. (Note
+      that it isn't necessary to create a `FileIO` class in order to pass this
+      exercise, just follow the hints given to read the file directly.)
 
-Finally, we'll be looking at persisting data by reading and writing files.
+- [ ] Wrap your logic in a `try/catch` block and, in case of failure:
 
-To run the tests for them, use `npm run test:d2e3`.
+  - use `System.err.println` to print the message `"Something went wrong"`
 
-- [ ] Have a look at
-      [Reading and Writing Files](https://tech-docs.corndel.com/js/reading-and-writing-files.html).
+  - return `0`
 
-- [ ] Complete the functions in [exercises/fileIO.js](/exercises/fileIO.js).
+## Exercise 3: Working with JSON
+
+Take a look at the `exercises/Element.java` file.
+
+This class has a static method called `fromJSONFile` which accepts a filename
+such as `helium.json`. These JSON files are located in `src/data/elements`. The
+method's purpose is to create an instance of `Element` based on the data in the
+file.
+
+- [ ] Use the `nio` library to read the element file specified by the filename,
+      e.g. `helium.json`.
+
+- [ ] Join the data in the file into a single JSON string.
+
+- [ ] Use Jackson's `ObjectMapper` to convert the JSON string into an instance
+      of `Element`.
+
+- [ ] Return the newly created element.
+
+Feel free to rethrow any errors, they're handled by the tests.
+
+There is a `main()` method to help debug.

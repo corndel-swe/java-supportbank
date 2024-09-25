@@ -6,60 +6,92 @@ the steps required to get this repo working.
 
 ## Exercise 1: Setting up the project
 
-(Please note that no tests will pass for Exercise 1 until all steps are
-completed, because the testing tools haven't been installed yet!)
-
 - [ ] Read the docs on
       [Creating a Maven project](https://tech-docs.corndel.com/java/creating-projects.html).
 
-- [ ]
+- [ ] Add the `picocli` dependency to the `pom.xml` file
 
-- [ ] Add Picocli
+- [ ] Run `./mvnw test -DTest="D1E1Tests"` to check it's right, then commit and
+      push
 
-## Exercise 2: Public classes and importing packages
-
-You'll have seen and used some `import` statements in the code
-you've been working with. This exercise is about setting that up for the
-project.
+## Exercise 2: Creating a CLI
 
 - [ ] Read the docs on
-      [import and export](https://tech-docs.corndel.com/js/imports-and-exports.html).
+      [creating a CLI](https://tech-docs.corndel.com/java/making-a-cli.html)
 
-- [ ] There is a file in `exercises/hello.java`. Make sure qq class is public
+There is a file in `exercises/HelloWorld.java` where we will create a simple
+CLI.
 
-- [ ] make sure qq property is public
+Use `picocli` just like in the video to create a CLI according to the following
+specifications:
 
-- [ ] Check that the tests are passing. Commit and push!
+- [ ] Import `picocli.CommandLine` and `picocli.CommandLine.Command`
 
-## Exercise 3: Using Picocli
+- [ ] Use the `@Command` decorator, making sure the `name` is `"hello"`
 
-Let's set up a CLI so that we can run the program from the command line.
+- [ ] Make sure the `Hello` class implements runnable and `@Override`s the
+      `run()` method
 
-- [ ] Read the page on
-      [Making a CLI](https://tech-docs.corndel.com/js/making-a-cli.html).
+- [ ] The `run()` should simply print `"Hello, World!"` (this is
+      case-sensitive!)
 
-- [ ] make a new commandLine in main class
+- [ ] In the `main()` method, create and execute the CLI and call `System.exit`
+      with the exit code
 
-- [ ] import and register the transaction command as a "subcommand"
-      In `cli/transaction.js` there is a `transactionController`. It hasn't been
-      registered yet.
-      [Import and register](https://tech-docs.corndel.com/java/making-a-cli.html#qq)
-      it with the CLI in `cli/index.js`.
+> [!TIP]
+>
+> If you want to debug your CLI, you should be able to run it directly with the
+> command
+>
+> ```bash
+> ./mvnw -q exec:java -Dexec.mainClass="com.corndel.supportbank.exercises.HelloWorld"
+> ```
 
-- [ ] Right now, the `transaction log` command doesn't do anything. We want to
-      make it so that it logs the transactions to the console. Make it log a
-      transaction nicely, so that the command
+- [ ] Run `./mvnw test -DTest="D1E2ests"` to check it's right, then commit and
+      push
 
-      ```bash
-      ./mvnw  cli transaction log "Jon A" "Joe G" 100
-      ```
+## Exercise 3: Adding params
 
-      prints out something useful, such as
+- [ ] Add a `@Parameter` to the `HelloWorld` class
 
-      ```
-      At 01/03/2024 11:27am, Jon A sent Joe G £100
-      ```
+- [ ] Make sure the `index` is `0`
 
-- [ ] All tests should now be passing. Commit and push!
+- [ ] Set `defaultValue = "World"` in the parameter to ensure that Exercise 2
+      doesn't break!
 
-Congratulations! Your project is set up with qq 🎉!
+> [!TIP]
+>
+> You can debug your CLI with arguments by running a command like
+>
+> ```bash
+> ./mvnw -q exec:java -Dexec.mainClass="com.corndel.supportbank.exercises.HelloWorld" -Dexec.args="Alice"
+> ```
+
+## Exercise 4: Attaching a subcommand
+
+In `exercises/ColorCommand` you will find a subcommand. All we need to do is
+attach it to the `HelloWorld` app!
+
+- [ ] Read the notes on
+      [adding subcommands](https://tech-docs.corndel.com/java/adding-subcommands.html)
+
+- [ ] Uncomment the code in `exercises/ColorCommand` (use `Ctrl + A` to
+      highlight the whole text, then `Ctrl + /` to uncomment)
+
+- [ ] Add the `ColorCommand` subcommand to the `HelloWorld` app by including it
+      in the `subcommands` argument.
+
+> [!NOTE]
+>
+> this is a simple subcommand, not a nested subcommand, so your code will look
+> more like
+> [this section](https://tech-docs.corndel.com/java/adding-subcommands.html)
+> (i.e. you don't need to make a controller class).
+
+> [!TIP]
+>
+> You can debug the color subcommand by running
+>
+> ```bash
+> ./mvnw -q exec:java -Dexec.mainClass="com.corndel.supportbank.exercises.HelloWorld" -Dexec.args="color"
+> ```

@@ -2,14 +2,14 @@
 
 ## Technologies used
 
-QQ
+<!-- TODO update fetch -->
 
-| Name        | Purpose                                |
-| ----------- | -------------------------------------- |
-| `mocha`     | Test the project                       |
-| `commander` | Create the command-line interface      |
-| `dotenv`    | Securely store configuration variables |
-| `fetch`     | Retrieve data from a server            |
+| Name      | Purpose                                |
+| --------- | -------------------------------------- |
+| `junit`   | Test the project                       |
+| `picocli` | Create the command-line interface      |
+| `dotenv`  | Securely store configuration variables |
+| `fetch`   | Retrieve data from a server            |
 
 ## Models
 
@@ -25,8 +25,8 @@ You might have a `Currency` class, an `Investment` class, and so on.
 
 ## Controllers
 
-The `cli` folder is where we write code that allows users to interact with
-SupportBank by typing intuitive commands in the terminal.
+The `controllers` folder is where we write code that allows users to interact
+with SupportBank by typing intuitive commands in the terminal.
 
 In general, the code in this folder should focus on communicating between the
 user and the models, and it should avoid performing business logic (e.g.
