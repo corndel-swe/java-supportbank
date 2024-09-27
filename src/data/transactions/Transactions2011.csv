@@ -1,0 +1,101 @@
+Date,From,To,Narrative,Amount,Currency
+03/01/2011,Ben B,Stephen S,Spline Reticulation,45,EUR
+04/01/2011,Jon A,Todd,Sandbox Help,25.76,USD
+04/01/2011,Dan W,Stephen S,Coffee,2092.35,JPY
+06/01/2011,Sam N,Ben B,Spline Reticulation,33.52,USD
+12/01/2011,Jon A,Tim L,Coffee,3747.61,JPY
+15/01/2011,Rob S,Dan W,Automated Testing Services,638.54,JPY
+16/01/2011,Todd,Dan W,Snooker Night,662.11,JPY
+19/01/2011,Sarah T,Stephen S,Beers,16.66,GBP
+22/01/2011,Tim L,Gergana I,Services Rendered,30.32,EUR
+29/01/2011,Rob S,Gergana I,Rails Consultancy,3069.53,JPY
+30/01/2011,Tim L,Jon A,Beers,19.82,GBP
+01/02/2011,Tim L,Sarah T,Services Rendered,25.6,USD
+05/02/2011,Stephen S,Tim L,Pokemon Training,9.36,GBP
+06/02/2011,Todd,Gergana I,Services Rendered,22.98,AUD
+14/02/2011,Todd,Tim L,Pokemon Training,18.18,EUR
+14/02/2011,Dan W,Jon A,Rails Consultancy,26.58,GBP
+15/02/2011,Chris W,Stephen S,Snooker Night,31.53,USD
+03/03/2011,Sarah T,Ben B,Spline Reticulation,22.98,AUD
+03/03/2011,Sarah T,Stephen S,Spline Reticulation,32.47,EUR
+07/03/2011,Laura B,Chris W,Lunch,22.61,EUR
+16/03/2011,Chris W,Jon A,Automated Testing Services,18.05,USD
+21/03/2011,Todd,Gergana I,Coffee,68.66,AUD
+21/03/2011,Todd,Chris W,Rails Consultancy,44.52,EUR
+21/03/2011,Gergana I,Sam N,Spline Reticulation,31.61,USD
+21/03/2011,Gergana I,Ben B,Rails Consultancy,32.73,AUD
+02/04/2011,Ben B,Chris W,Coffee,33.27,AUD
+06/04/2011,Todd,Gergana I,Coffee,16.99,EUR
+09/04/2011,Tim L,Laura B,Automated Testing Services,8.46,EUR
+11/04/2011,Sarah T,Ben B,Rails Consultancy,18.25,GBP
+11/04/2011,Sarah T,Sam N,Sandbox Help,2124.19,JPY
+22/04/2011,Dan W,Todd,Coffee,1599.21,JPY
+29/04/2011,Sarah T,Ben B,Beers,5262.25,JPY
+29/04/2011,Rob S,Jon A,Snooker Night,3.75,USD
+30/04/2011,Sam N,Gergana I,Spline Reticulation,7.18,AUD
+01/05/2011,Todd,Rob S,Automated Testing Services,27.65,USD
+03/05/2011,Chris W,Ben B,Rails Consultancy,1.49,EUR
+05/05/2011,Tim L,Laura B,Pokemon Training,49.72,AUD
+06/05/2011,Rob S,Ben B,Services Rendered,9.35,GBP
+13/05/2011,Tim L,Ben B,Automated Testing Services,46.52,USD
+21/05/2011,Sarah T,Rob S,Snooker Night,9.72,EUR
+10/06/2011,Laura B,Sam N,Coffee,14.34,GBP
+12/06/2011,Stephen S,Todd,Services Rendered,5119.98,JPY
+14/06/2011,Gergana I,Stephen S,Sandbox Help,20.93,AUD
+18/06/2011,Gergana I,Rob S,Services Rendered,31.72,USD
+25/06/2011,Laura B,Stephen S,Rails Consultancy,4.17,AUD
+02/07/2011,Stephen S,Dan W,Sandbox Help,37.64,GBP
+07/07/2011,Tim L,Stephen S,Beers,19.77,GBP
+11/07/2011,Jon A,Stephen S,Sandbox Help,3900.8,JPY
+13/07/2011,Jon A,Tim L,Pokemon Training,2.34,GBP
+14/07/2011,Dan W,Sam N,Snooker Night,4.93,EUR
+20/07/2011,Laura B,Rob S,Automated Testing Services,13.53,GBP
+22/07/2011,Todd,Jon A,Lunch,42.73,USD
+11/08/2011,Chris W,Gergana I,Snooker Night,4907.69,JPY
+16/08/2011,Sam N,Jon A,Rails Consultancy,41.93,EUR
+17/08/2011,Sam N,Todd,Coffee,44.32,EUR
+18/08/2011,Gergana I,Ben B,Sandbox Help,23.61,EUR
+19/08/2011,Dan W,Gergana I,Snooker Night,3.57,AUD
+20/08/2011,Sam N,Chris W,Snooker Night,10.92,AUD
+25/08/2011,Jon A,Chris W,Coffee,21.33,EUR
+25/08/2011,Jon A,Chris W,Automated Testing Services,31.25,GBP
+31/08/2011,Sam N,Ben B,Sandbox Help,5.95,EUR
+31/08/2011,Todd,Chris W,Rails Consultancy,4719.03,JPY
+01/09/2011,Todd,Tim L,Rails Consultancy,32.23,EUR
+04/09/2011,Sam N,Sarah T,Services Rendered,57.48,AUD
+08/09/2011,Sarah T,Tim L,Sandbox Help,1090.63,JPY
+09/09/2011,Ben B,Gergana I,Rails Consultancy,12.83,EUR
+10/09/2011,Ben B,Stephen S,Beers,20.29,GBP
+14/09/2011,Laura B,Gergana I,Spline Reticulation,25.84,USD
+16/09/2011,Chris W,Laura B,Spline Reticulation,31.91,EUR
+24/09/2011,Gergana I,Ben B,Spline Reticulation,41.32,EUR
+01/10/2011,Sarah T,Laura B,Coffee,12.7,AUD
+06/10/2011,Gergana I,Rob S,Rails Consultancy,29.96,EUR
+08/10/2011,Todd,Sarah T,Automated Testing Services,1.02,EUR
+08/10/2011,Sarah T,Stephen S,Rails Consultancy,25.28,USD
+13/10/2011,Jon A,Laura B,Snooker Night,47.65,AUD
+22/10/2011,Todd,Laura B,Rails Consultancy,30.22,USD
+26/10/2011,Sam N,Dan W,Spline Reticulation,7.16,EUR
+26/10/2011,Sam N,Sarah T,Pokemon Training,3.09,EUR
+02/11/2011,Gergana I,Ben B,Automated Testing Services,39.53,USD
+07/11/2011,Todd,Ben B,Lunch,2976.87,JPY
+08/11/2011,Rob S,Tim L,Snooker Night,503.05,JPY
+08/11/2011,Rob S,Sarah T,Lunch,21.69,AUD
+09/11/2011,Chris W,Dan W,Coffee,9.67,GBP
+10/11/2011,Gergana I,Tim L,Rails Consultancy,979.49,JPY
+15/11/2011,Gergana I,Sarah T,Coffee,37.67,GBP
+18/11/2011,Todd,Jon A,Services Rendered,15.83,GBP
+19/11/2011,Tim L,Dan W,Beers,788.72,JPY
+21/11/2011,Sam N,Rob S,Spline Reticulation,3475.68,JPY
+29/11/2011,Gergana I,Stephen S,Lunch,27.59,EUR
+30/11/2011,Sarah T,Ben B,Lunch,34.06,GBP
+30/11/2011,Sam N,Gergana I,Coffee,724.97,JPY
+04/12/2011,Sarah T,Dan W,Automated Testing Services,42.31,EUR
+05/12/2011,Sam N,Dan W,Snooker Night,3492.37,JPY
+07/12/2011,Chris W,Sarah T,Pokemon Training,40.34,USD
+21/12/2011,Gergana I,Sam N,Rails Consultancy,41.06,EUR
+22/12/2011,Sam N,Sarah T,Beers,8.75,USD
+22/12/2011,Sam N,Laura B,Beers,15.31,USD
+25/12/2011,Chris W,Todd,Lunch,35.4,EUR
+29/12/2011,Rob S,Todd,Snooker Night,5.84,EUR
+29/12/2011,Rob S,Stephen S,Coffee,2.97,USD

@@ -2,14 +2,12 @@
 
 ## Technologies used
 
-<!-- TODO update fetch -->
-
-| Name      | Purpose                                |
-| --------- | -------------------------------------- |
-| `junit`   | Test the project                       |
-| `picocli` | Create the command-line interface      |
-| `dotenv`  | Securely store configuration variables |
-| `fetch`   | Retrieve data from a server            |
+| Name                                              | Purpose                                |
+| ------------------------------------------------- | -------------------------------------- |
+| `junit`                                           | Test the project                       |
+| [`picocli`](https://picocli.info/)                | Create the command-line interface      |
+| `java-dotenv`                                     | Securely store configuration variables |
+| [`unirest`](https://kong.github.io/unirest-java/) | Retrieve data from a server            |
 
 ## Models
 

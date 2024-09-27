@@ -19,10 +19,20 @@ Let's make a command which splits the bill when people want to share the cost.
 To split a £60 bill between three people, it should take an input like this:
 
 ```bash
-node cli bill split 60 3
+supportbank bill split 60 3
 ```
 
 and print a message in the console to say each person owes £20.
+
+> [!NOTE]
+>
+> When you are debugging the project in development, you can use a command like
+>
+> ```bash
+> ./mvnw exec:java -Dexec.args="bill split 60 3"
+> ```
+>
+> to debug the CLI.
 
 > [!TIP]
 >
@@ -38,7 +48,7 @@ and print a message in the console to say each person owes £20.
 Let's write a currency converter. It should take an input like the following:
 
 ```bash
-node cli currency convert 100 USD GBP
+supportbank currency convert 100 USD GBP
 ```
 
 and return the equivalent amount in the second currency. Try adding a few
@@ -56,7 +66,7 @@ Let's say they invest £1500 at a rate of 4% over 12 years with
 [simple interest](https://www.bbc.co.uk/bitesize/guides/zv9p34j/revision/2).
 
 ```bash
-node cli invest simple 1500 4 12
+supportbank invest simple 1500 4 12
 ```
 
 The above command should calculate the projected value of the investment.
@@ -81,7 +91,7 @@ Here are the UK [rules for income tax](https://www.gov.uk/income-tax-rates):
 If a customer has a salary of £28,000, they should be able to run
 
 ```bash
-node cli salary tax 28000
+supportbank salary tax 28000
 ```
 
 and see their new salary after tax.
@@ -95,16 +105,29 @@ they should.
 
 ### Optional parameters
 
-If you add a parameter to a command using square brackets instead of round
-brackets, it becomes optional.
+We can add options to our CLI commands using the `@Option` decorator.
 
 For example,
 
-```js
-billController.command('split <amount> <people> [tip]')
+```java
+@Parameters(index = "0", description = "The total bill amount.")
+private double amount;
+
+@Parameters(index = "1", description = "The number of people to split the bill with.")
+private int people;
+
+@Option(names = {"-t", "--tip"}, description = "The optional tip percentage.")
+private double tip = 0.0; // default value if not provided
 ```
 
 means that `amount` and `people` must be provided, but `[tip]` is optional.
+
+It would be used like this:
+
+```bash
+supportbank bill split 100 4 --tip 15
+# Each person owes: £28.75
+```
 
 - Could you add an optional tip to add to the bill before spltting?
 

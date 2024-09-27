@@ -17,13 +17,13 @@ Use a class for each type of object you want to create.
 
 You should add two commands:
 
-- [ ] `node cli transaction summarise all` – should output the names of each
-      person, and the total amount of money they should receive from the bank.
-      (It could be a negative number, if they owe the bank money!)
+- [ ] `supportbank transaction summarise` – should output the names of each
+      person, and their current balance according to `Transactions2014.csv`.
 
-- [ ] `node cli transaction list <account name>` – should print a list of every
-      transaction, with the date and narrative, for that person’s account. For
-      example, `node cli list "jon a"` would list all of Jon A’s transactions.
+- [ ] `supportbank transaction list <account name>` – should print a list of
+      every transaction, with the date and narrative, for that person’s account.
+      For example, `supportbank transaction list "jon a"` would list all of Jon
+      A’s transactions.
 
 ## Moving on
 
@@ -36,24 +36,25 @@ may crop up.
 
 ### Working with csv
 
-You can use `string.split` to split several lines of text into an array.
+There is a note on
+[working with CSV](https://tech-docs.corndel.com/java/file-io.html#csv) which
+will give you some ideas about using split and join to deal with rows of CSV.
 
-For example
+### Removing the CSV header
 
-```txt
-a,b,c
-d,e,f
-g,h,i
-```
+There are a number of ways we could remove the header row from the CSV.
+[`.remove(0)`](https://tech-docs.corndel.com/java/lists.html#arraylist-methods)
+or
+[`.sublist()`](https://tech-docs.corndel.com/java/list-techniques.html#sublists)
+could be used.
 
-```js
-txt.split('\n') // => ['a,b,c', 'd,e,f', 'g,h,i']
-```
+### JSON lists
 
-You can then use `.split(',')` on each item in the array to separate out the
-values.
+There is a note on
+[parsing lists of JSON](https://tech-docs.corndel.com/java/working-with-json.html#json-lists)
+which will help with `2013.json`.
 
-### Removing the header
+### XML
 
-Remember [slice](https://tech-docs.corndel.com/js/array-slice.html)? You can use
-`.slice(1)` to keep only the data rows and get rid of the header.
+There are notes on how to parse XML
+[here](https://www.baeldung.com/java-xerces-dom-parsing)
