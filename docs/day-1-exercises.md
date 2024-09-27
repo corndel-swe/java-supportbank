@@ -16,7 +16,7 @@ added!
 
 - [ ] Run `./mvnw clean compile`
 
-- [ ] Run `./mvnw test -DTest="D1E1Tests"` to check it's right, then commit and
+- [ ] Run `./mvnw test -DTest="D1E1Test"` to check it's right, then commit and
       push
 
 ## Exercise 2: Creating a CLI
@@ -52,7 +52,7 @@ specifications:
 > ./mvnw -q exec:java -Dexec.mainClass="com.corndel.supportbank.exercises.HelloWorld"
 > ```
 
-- [ ] Run `./mvnw test -DTest="D1E2ests"` to check it's right, then commit and
+- [ ] Run `./mvnw test -DTest="D1E2Test"` to check it's right, then commit and
       push
 
 ## Exercise 3: Adding params
@@ -63,6 +63,9 @@ specifications:
 
 - [ ] Set `defaultValue = "World"` in the parameter to ensure that Exercise 2
       doesn't break!
+
+- [ ] Run `./mvnw test -DTest="D1E2Test D1E3Test"` to check it's right, then
+      commit and push
 
 > [!TIP]
 >
@@ -85,6 +88,9 @@ attach it to the `HelloWorld` app!
 
 - [ ] Add the `ColorCommand` subcommand to the `HelloWorld` app by including it
       in the `subcommands` argument.
+
+- [ ] Run `./mvnw test -DTest="D1E4Test"` to check it's right, then commit and
+      push
 
 > [!NOTE]
 >
