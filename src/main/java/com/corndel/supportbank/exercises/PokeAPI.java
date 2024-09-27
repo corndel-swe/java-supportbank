@@ -1,10 +1,6 @@
 package com.corndel.supportbank.exercises;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
+import kong.unirest.Unirest;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -28,25 +24,23 @@ public class PokeAPI {
    *
    * @param name The name of the Pokemon to retrieve.
    * @return The Pokemon object.
+   * @throws JsonProcessingException
+   * @throws JsonMappingException
    */
-  public static Pokemon getPokemonByName(String name) throws IOException, InterruptedException {
-    // TODO: Make a HttpClient
-    HttpClient client = HttpClient.newHttpClient();
+  public static Pokemon getPokemonByName(String name) throws Exception {
+    String url = "https://pokeapi.co/api/v2/pokemon/" + name;
 
-    // TODO: Build the HttpRequest
-    HttpRequest request = HttpRequest.newBuilder()
-        .uri(URI.create("https://pokeapi.co/api/v2/pokemon/" + name))
-        .build();
+    // TODO: Make a GET request to the url
+    // Hint: Use Unirest.get()
+    var response = Unirest
+        .get(url)
+        .header("Accept", "application/json")
+        .asString();
 
-    // TODO: Send the HttpRequest
-    HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
-    // TODO: Parse the HttpResponse into a Pokemon object
-    // Hint: Use response.body()
-    // Hint: Use Jackson's ObjectMapper and the Pokemon class
-    String json = response.body();
+    // TODO: Parse the response body into a Pokemon object
+    // Hint: Use Jackson's ObjectMapper to map the response body to Pokemon.class
     ObjectMapper mapper = new ObjectMapper();
-    Pokemon pokemon = mapper.readValue(json, Pokemon.class);
+    Pokemon pokemon = mapper.readValue(response.getBody(), Pokemon.class);
 
     // TODO: Return the Pokemon
     return pokemon;
@@ -59,7 +53,7 @@ public class PokeAPI {
     try {
       Pokemon pokemon = getPokemonByName("pikachu");
       System.out.println(pokemon);
-    } catch (IOException | InterruptedException e) {
+    } catch (Exception e) {
       e.printStackTrace();
     }
   }
