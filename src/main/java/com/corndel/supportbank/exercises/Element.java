@@ -25,7 +25,7 @@ public class Element {
     String json = String.join("", lines);
 
     // TODO: Convert the json to an instance of Element
-    // Hint: Use Jackson's ObjectMapper
+    // Hint: Use Jackson's ObjectMapper to map the json to Element.class
     ObjectMapper mapper = new ObjectMapper();
     Element element = mapper.readValue(json, Element.class);
 
@@ -34,7 +34,7 @@ public class Element {
   }
 
   /**
-   * Main method for debugging purposes. Prints the Element class.
+   * Main method for debugging purposes. Prints the Element.
    */
   public static void main(String[] args) {
     Element element;
