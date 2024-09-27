@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.lang.reflect.*;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
