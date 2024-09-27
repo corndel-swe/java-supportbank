@@ -24,9 +24,6 @@ Right now, some parts of the project have been written, but it has been
 abandoned by the contractor, and there are a number of steps we need to take to
 get it working.
 
-Fortunately, the original developer was practising TDD, so there are some tests
-to guide us!
-
 ## Getting started
 
 1. Make sure your machine is set up according to the instructions with
