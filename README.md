@@ -12,13 +12,11 @@ financial data stored on the user's computer, and make use of data on a server.
 
 For example,
 
-<!-- TODO: Update this once we've decided the cli design -->
-
 ```bash
-java -jar target/supportbank-0.0.1-SNAPSHOT.jar convert 100 USD GBP
+./mvnw exec:java -Dexec.args="convert 100 USD GBP"
 ```
 
-will convert currency for them
+will convert currency for them.
 
 ## State of the project
 
@@ -38,12 +36,14 @@ to guide us!
    - [git](https://tech-docs.corndel.com/git/)
    - [java and maven](https://tech-docs.corndel.com/java/installation.html)
 
-1. Clone your fork of the repository (i.e. download it), so you have a copy on your machine.
+1. Clone your fork of the repository (i.e. download it), so you have a copy on
+   your machine.
 
 > [!NOTE]
 >
-> Running `./mvnw package` won't work because this project hasn't been fully set up yet!
-> That's what we'll be doing in the Day 1 Exercises, so move straight on :arrow_down:
+> Running `./mvnw clean compile` won't work because this project hasn't been
+> fully set up yet! That's what we'll be doing in the Day 1 Exercises, so move
+> straight on :arrow_down:
 
 ## Exercises
 

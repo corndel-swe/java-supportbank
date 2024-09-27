@@ -11,6 +11,8 @@ the steps required to get this repo working.
 
 - [ ] Add the `picocli` dependency to the `pom.xml` file
 
+- [ ] Run `./mvnw clean compile`
+
 - [ ] Run `./mvnw test -DTest="D1E1Tests"` to check it's right, then commit and
       push
 
@@ -75,8 +77,8 @@ attach it to the `HelloWorld` app!
 - [ ] Read the notes on
       [adding subcommands](https://tech-docs.corndel.com/java/adding-subcommands.html)
 
-- [ ] Uncomment the code in `exercises/ColorCommand` (use `Ctrl + A` to
-      highlight the whole text, then `Ctrl + /` to uncomment)
+- [ ] Take a look at the `exercises/ColorCommand` file. Uncomment the whole
+      file. (`Ctrl + A` to select all, and `Ctrl + /` to toggle comment.)
 
 - [ ] Add the `ColorCommand` subcommand to the `HelloWorld` app by including it
       in the `subcommands` argument.
@@ -85,7 +87,7 @@ attach it to the `HelloWorld` app!
 >
 > this is a simple subcommand, not a nested subcommand, so your code will look
 > more like
-> [this section](https://tech-docs.corndel.com/java/adding-subcommands.html)
+> [this section](https://tech-docs.corndel.com/java/adding-subcommands.html#a-simple-subcommand)
 > (i.e. you don't need to make a controller class).
 
 > [!TIP]

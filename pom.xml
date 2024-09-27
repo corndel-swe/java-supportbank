@@ -13,11 +13,8 @@
   </licenses>
   <properties></properties>
   <dependencies>
-    <dependency>
-      <groupId>info.picocli</groupId>
-      <artifactId>picocli</artifactId>
-      <version>4.7.6</version>
-    </dependency>
+    <!-- TODO: Add the picocli dependency -->
+    <!-- https://tech-docs.corndel.com/java/making-a-cli.html#installing-picocli -->
 
     <dependency>
       <groupId>com.konghq</groupId>

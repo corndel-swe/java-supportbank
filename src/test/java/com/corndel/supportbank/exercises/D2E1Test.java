@@ -11,7 +11,7 @@ public class D2E1Test {
     UserId userId = new UserId(validId);
 
     assertDoesNotThrow(() -> {
-      boolean result = userId.validate(validId);
+      boolean result = userId.validate();
       assertTrue(result, "validate should return true for a valid ID");
     });
   }
@@ -22,7 +22,7 @@ public class D2E1Test {
     UserId userId = new UserId(invalidId);
 
     Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-      userId.validate(invalidId);
+      userId.validate();
     });
 
     String expectedMessage = "The id must be an odd number of characters long";
@@ -37,7 +37,7 @@ public class D2E1Test {
     UserId userId = new UserId(invalidId);
 
     Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-      userId.validate(invalidId);
+      userId.validate();
     });
 
     String expectedMessage = "The id must contain the letter 'a'";
@@ -52,7 +52,7 @@ public class D2E1Test {
     UserId userId = new UserId(invalidId);
 
     Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-      userId.validate(invalidId);
+      userId.validate();
     });
 
     String expectedMessage = "The id must be all lowercase";
