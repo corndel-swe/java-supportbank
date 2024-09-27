@@ -64,8 +64,8 @@ specifications:
 - [ ] Set `defaultValue = "World"` in the parameter to ensure that Exercise 2
       doesn't break!
 
-- [ ] Run `./mvnw test -DTest="D1E2Test D1E3Test"` to check it's right, then
-      commit and push
+- [ ] Run `./mvnw test -DTest="D1E3Test"` to check it's right, then commit and
+      push
 
 > [!TIP]
 >
