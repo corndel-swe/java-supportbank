@@ -6,22 +6,22 @@ the steps required to get this repo working.
 
 ## Exercise 1: Setting up the project
 
-- [x] Read the docs on
+- [ ] Read the docs on
       [Creating a Maven project](https://tech-docs.corndel.com/java/creating-projects.html).
 
 The rest of the steps have been done in this repo, but `picocli` hasn't been
 added!
 
-- [x] Add the `picocli` dependency to the `pom.xml` file
+- [ ] Add the `picocli` dependency to the `pom.xml` file
 
-- [x] Run `./mvnw clean compile`
+- [ ] Run `./mvnw clean compile`
 
-- [x] Run `./mvnw test -DTest="D1E1Test"` to check it's right, then commit and
+- [ ] Run `./mvnw test -DTest="D1E1Test"` to check it's right, then commit and
       push
 
 ## Exercise 2: Creating a CLI
 
-- [x] Read the docs on
+- [ ] Read the docs on
       [creating a CLI](https://tech-docs.corndel.com/java/making-a-cli.html)
 
 There is a file in `exercises/HelloWorld.java` where we will create a simple
@@ -30,17 +30,17 @@ CLI.
 Use `picocli` just like in the video to create a CLI according to the following
 specifications:
 
-- [x] Import `picocli.CommandLine` and `picocli.CommandLine.Command`
+- [ ] Import `picocli.CommandLine` and `picocli.CommandLine.Command`
 
-- [x] Use the `@Command` decorator, making sure the `name` is `"hello"`
+- [ ] Use the `@Command` decorator, making sure the `name` is `"hello"`
 
-- [x] Make sure the `Hello` class implements runnable and `@Override`s the
+- [ ] Make sure the `Hello` class implements runnable and `@Override`s the
       `run()` method
 
-- [x] The `run()` should simply print `"Hello, World!"` (this is
+- [ ] The `run()` should simply print `"Hello, World!"` (this is
       case-sensitive!)
 
-- [x] In the `main()` method, create and execute the CLI and call `System.exit`
+- [ ] In the `main()` method, create and execute the CLI and call `System.exit`
       with the exit code
 
 > [!TIP]
@@ -52,19 +52,19 @@ specifications:
 > ./mvnw -q exec:java -Dexec.mainClass="com.corndel.supportbank.exercises.HelloWorld"
 > ```
 
-- [x] Run `./mvnw test -DTest="D1E2Test"` to check it's right, then commit and
+- [ ] Run `./mvnw test -DTest="D1E2Test"` to check it's right, then commit and
       push
 
 ## Exercise 3: Adding params
 
-- [x] Add a `@Parameter` to the `HelloWorld` class
+- [ ] Add a `@Parameter` to the `HelloWorld` class
 
-- [x] Make sure the `index` is `0`
+- [ ] Make sure the `index` is `0`
 
-- [x] Set `defaultValue = "World"` in the parameter to ensure that Exercise 2
+- [ ] Set `defaultValue = "World"` in the parameter to ensure that Exercise 2
       doesn't break!
 
-- [x] Run `./mvnw test -DTest="D1E3Test"` to check it's right, then commit and
+- [ ] Run `./mvnw test -DTest="D1E3Test"` to check it's right, then commit and
       push
 
 > [!TIP]
@@ -80,16 +80,16 @@ specifications:
 In `exercises/ColorCommand` you will find a subcommand. All we need to do is
 attach it to the `HelloWorld` app!
 
-- [x] Read the notes on
+- [ ] Read the notes on
       [adding subcommands](https://tech-docs.corndel.com/java/adding-subcommands.html)
 
-- [x] Take a look at the `exercises/ColorCommand` file. Uncomment the whole
+- [ ] Take a look at the `exercises/ColorCommand` file. Uncomment the whole
       file. (`Ctrl + A` to select all, and `Ctrl + /` to toggle comment.)
 
-- [x] Add the `ColorCommand` subcommand to the `HelloWorld` app by including it
+- [ ] Add the `ColorCommand` subcommand to the `HelloWorld` app by including it
       in the `subcommands` argument.
 
-- [x] Run `./mvnw test -DTest="D1E4Test"` to check it's right, then commit and
+- [ ] Run `./mvnw test -DTest="D1E4Test"` to check it's right, then commit and
       push
 
 > [!NOTE]
