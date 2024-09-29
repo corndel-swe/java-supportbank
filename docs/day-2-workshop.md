@@ -72,6 +72,8 @@ which will help with `Transactions2013.json`.
 If you find that the keys in the JSON don't match up with the keys in the object
 you're mapping to, you can use a special decorator.
 
+For example,
+
 ```java
 class Transaction {
   @JsonProperty("Amount")
