@@ -2,11 +2,8 @@ package com.corndel.supportbank.exercises;
 
 import java.io.IOException;
 import java.nio.file.*;
-import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-// import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Element {
   /**
