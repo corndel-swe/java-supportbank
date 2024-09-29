@@ -32,16 +32,12 @@ and print a message in the console to say each person owes £20.
 > ./mvnw exec:java -Dexec.args="bill split 60 3"
 > ```
 >
-> to debug the CLI.
+> to manually check the CLI.
 
 > [!TIP]
 >
-> You could consider using classes to encapsulate the business logic, and just
-> use the `cli` to expose the functionality to the user.
->
-> For example, a `Bill` class with a `total` property and a `split(people)`
-> method could handle the logic, and the controller could use this class to
-> create a message and display it to the user.
+> Consider making a `Bill` class with a `total` property and a
+> `split(numPeople)` property.
 
 ## Currency converter
 
