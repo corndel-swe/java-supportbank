@@ -51,7 +51,7 @@ specifications:
 > command
 >
 > ```bash
-> ./mvnw -q exec:java -Dexec.mainClass="com.corndel.supportbank.exercises.HelloWorld"
+> ./mvnw exec:java -Phelloworld
 > ```
 
 - [ ] Run `./mvnw test -DTest="D1E2Test"` to check it's right, then commit and
