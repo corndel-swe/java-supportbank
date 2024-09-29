@@ -104,5 +104,5 @@ attach it to the `HelloWorld` app!
 > You can debug the color subcommand by running
 >
 > ```bash
-> ./mvnw -q exec:java -Dexec.mainClass="com.corndel.supportbank.exercises.HelloWorld" -Dexec.args="color"
+> ./mvnw exec:java -Phelloworld -Dexec.args="color"
 > ```

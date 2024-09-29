@@ -23,8 +23,8 @@ class Convert implements Runnable {
 
   @Override
   public void run() {
-    var from = new Currency(amount, fromCode);
-    var to = from.convert(toCode);
-    System.out.println(to);
+    Currency money = new Currency(amount, fromCode);
+    money.convert(toCode);
+    System.out.println(money);
   }
 }
