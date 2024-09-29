@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.corndel.supportbank.models.Transaction;
 import com.corndel.supportbank.models.Account;
+import com.corndel.supportbank.models.Currency;
 import com.corndel.supportbank.utils.FileIO;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -31,6 +32,7 @@ class SummariseTransactions implements Runnable {
    */
   @Override
   public void run() {
+    Currency.refreshRates();
     var parts = filename.split("\\.");
     var ext = parts[parts.length - 1];
 
@@ -42,7 +44,6 @@ class SummariseTransactions implements Runnable {
       };
 
       for (var transaction : transactions) {
-        System.out.println(transaction);
         transaction.commit();
       }
 

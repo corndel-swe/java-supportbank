@@ -43,7 +43,7 @@ rates.
 
 Modify the currency converter to use live exchange rates, fetched from the API.
 
-## Extension
+## Extensions
 
 In `Transactions2011.csv`, you can see that the `Currency` column specifies the
 currency of the `Amount` transferred.

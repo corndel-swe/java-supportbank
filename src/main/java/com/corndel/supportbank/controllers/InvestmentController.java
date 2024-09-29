@@ -52,6 +52,14 @@ class InvestCompound implements Runnable {
   @Parameters(index = "3", description = "The number of years to invest")
   private int years;
 
+  /**
+   * Simulates a compound interest investment.
+   *
+   * This method creates an instance of CompoundInvestment and applies the
+   * increment method to it for the number of years provided.
+   *
+   * The final amount is then printed to the console.
+   */
   @Override
   public void run() {
     Investment investment = new CompoundInvestment(rate, new Currency(amount, currency));

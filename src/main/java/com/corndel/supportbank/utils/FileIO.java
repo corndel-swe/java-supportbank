@@ -11,10 +11,22 @@ public class FileIO {
     this.filePath = Paths.get("src", "data", fileName);
   }
 
+  /**
+   * Reads all lines from a file and returns them as a List of Strings.
+   * 
+   * @return A list of all lines in the file.
+   * @throws IOException if an error occurs while reading the file.
+   */
   public List<String> readLines() throws IOException {
     return Files.readAllLines(this.filePath);
   }
 
+  /**
+   * Reads all lines from a file and returns them as a single String.
+   * 
+   * @return The contents of the file as a single String.
+   * @throws IOException if an error occurs while reading the file.
+   */
   public String readFile() throws IOException {
     List<String> lines = readLines();
     return String.join("", lines);

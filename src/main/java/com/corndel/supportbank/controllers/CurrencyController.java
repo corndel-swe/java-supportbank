@@ -21,8 +21,13 @@ class Convert implements Runnable {
   @Parameters(index = "2", description = "The currency to convert to")
   private String toCode;
 
+  /**
+   * Refresh the currency exchange rates, convert the given amount from the
+   * given currency to the given currency, and print the result.
+   */
   @Override
   public void run() {
+    Currency.refreshRates();
     Currency money = new Currency(amount, fromCode);
     money.convert(toCode);
     System.out.println(money);

@@ -15,7 +15,7 @@ public class Transaction {
   private double value;
 
   @JsonProperty("Currency")
-  private String code;
+  private String code = "GBP";
 
   public Transaction(Account from, Account to, double value, String code) {
     this.from = from;
@@ -35,5 +35,10 @@ public class Transaction {
     var amount = new Currency(value, code);
     from.getBalance().subtract(amount);
     to.getBalance().add(amount);
+  }
+
+  @Override
+  public String toString() {
+    return String.format("Transaction [from=%s, to=%s, value=%s, code=%s]", from, to, value, code);
   }
 }

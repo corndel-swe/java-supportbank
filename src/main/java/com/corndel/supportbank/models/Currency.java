@@ -1,25 +1,36 @@
 package com.corndel.supportbank.models;
 
 import java.util.Map;
+import com.corndel.supportbank.utils.OpenExAPI;
 
 public class Currency {
   private double value;
   private String code;
-  private String symbol;
 
   public static Map<String, Double> rates = Map.of(
-      "GBP", 1.0,
-      "EUR", 1.2,
-      "USD", 1.4,
-      "JPY", 130.0,
+      "USD", 1.0,
+      "GBP", 0.8,
+      "EUR", 0.9,
+      "JPY", 110.0,
       "AUD", 1.5);
 
   public static Map<String, String> symbols = Map.of(
       "GBP", "£",
-      "EUR", "€",
       "USD", "$",
+      "EUR", "€",
       "JPY", "¥",
       "AUD", "A$");
+
+  /**
+   * Fetch the latest currency exchange rates from the Open Exchange Rates API
+   * and set them as the rates for this application.
+   *
+   * This method should be called whenever the user wishes to refresh the
+   * currency exchange rates.
+   */
+  public static void refreshRates() {
+    rates = OpenExAPI.fetchRates();
+  }
 
   public Currency(double value, String code) {
     if (!rates.containsKey(code)) {
@@ -49,12 +60,11 @@ public class Currency {
     double rate = rates.get(toCode) / rates.get(code);
     this.value = value * rate;
     this.code = toCode;
-    this.symbol = symbols.get(toCode);
   }
 
   @Override
   public String toString() {
-    return String.format("%s%.2f", symbol, value);
+    return String.format("%s%.2f", getSymbol(), value);
   }
 
   public double getValue() {

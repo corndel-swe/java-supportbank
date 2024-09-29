@@ -18,6 +18,12 @@ class TaxCalculator implements Runnable {
   @Parameters(index = "1", description = "The currency of the salary.")
   private String currency;
 
+  /**
+   * Calculates the salary after tax.
+   *
+   * This method creates a Salary object from the given amount and currency,
+   * applies the tax, and prints the result.
+   */
   @Override
   public void run() {
     Salary salary = new Salary(new Currency(amount, currency));

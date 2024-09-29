@@ -25,6 +25,10 @@ class BillSplit implements Runnable {
   @Option(names = { "-t", "--tip" }, description = "The optional tip percentage.")
   private double tip = 0.0; // default value if not provided
 
+  /**
+   * Print the amount that each person owes, given the total bill amount and the
+   * number of people to split it with.
+   */
   @Override
   public void run() {
     Bill bill = new Bill(new Currency(amount, currency), people);
