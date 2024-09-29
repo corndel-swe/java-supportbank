@@ -110,19 +110,15 @@ We can add options to our CLI commands using the `@Option` decorator.
 For example,
 
 ```java
-@Parameters(index = "0", description = "The total bill amount.")
-private double amount;
+class Bill {
 
-@Parameters(index = "1", description = "The number of people to split the bill with.")
-private int people;
+  @Option(names = {"-t", "--tip"}, description = "The optional tip percentage.")
+  private double tip = 0.0; // default value if not provided
 
-@Option(names = {"-t", "--tip"}, description = "The optional tip percentage.")
-private double tip = 0.0; // default value if not provided
+}
 ```
 
-means that `amount` and `people` must be provided, but `[tip]` is optional.
-
-It would be used like this:
+means that `tip` is optional and would be used like this:
 
 ```bash
 supportbank bill split 100 4 --tip 15
