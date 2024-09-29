@@ -32,16 +32,12 @@ and print a message in the console to say each person owes £20.
 > ./mvnw exec:java -Dexec.args="bill split 60 3"
 > ```
 >
-> to debug the CLI.
+> to manually check the CLI.
 
 > [!TIP]
 >
-> You could consider using classes to encapsulate the business logic, and just
-> use the `cli` to expose the functionality to the user.
->
-> For example, a `Bill` class with a `total` property and a `split(people)`
-> method could handle the logic, and the controller could use this class to
-> create a message and display it to the user.
+> Consider making a `Bill` class with a `total` property and a
+> `split(numPeople)` property.
 
 ## Currency converter
 
@@ -57,6 +53,10 @@ different currencies and allow the users to convert between them.
 Feel free to hard-code the
 [exchange rates](https://www.google.com/search?q=1+usd+to+gbp) for now. We'll
 improve this in a later workshop.
+
+> [!TIP]
+>
+> See the hints at the bottom of this file.
 
 ## Investment calculator
 
@@ -110,19 +110,15 @@ We can add options to our CLI commands using the `@Option` decorator.
 For example,
 
 ```java
-@Parameters(index = "0", description = "The total bill amount.")
-private double amount;
+class Bill {
 
-@Parameters(index = "1", description = "The number of people to split the bill with.")
-private int people;
+  @Option(names = {"-t", "--tip"}, description = "The optional tip percentage.")
+  private double tip = 0.0; // default value if not provided
 
-@Option(names = {"-t", "--tip"}, description = "The optional tip percentage.")
-private double tip = 0.0; // default value if not provided
+}
 ```
 
-means that `amount` and `people` must be provided, but `[tip]` is optional.
-
-It would be used like this:
+means that `tip` is optional and would be used like this:
 
 ```bash
 supportbank bill split 100 4 --tip 15
@@ -147,9 +143,6 @@ var map = Map.of("a", 1, "b", 2);
 
 map.get("a"); // 1
 map.get("b"); // 2
-
-map.put("c", 3);
-map.get("c") // 3
 ```
 
 This could be useful for storing rates or symbols, for example:

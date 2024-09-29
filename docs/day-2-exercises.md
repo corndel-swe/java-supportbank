@@ -31,7 +31,7 @@ integer.
 >
 > We will follow the convention that the input files are located in the
 > `src/data` directory (or a subdirectory). When constructing your filepath, you
-> should construct it as "src/data/fileName" like we do in the docs.
+> should construct it as "src/data/..." like we do in the docs.
 
 - [ ] In `Adder.java`, complete the `add` method to return the sum of the
       numbers in the given file. There are hints in the file to follow. (Note

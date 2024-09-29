@@ -12,7 +12,9 @@ the steps required to get this repo working.
 The rest of the steps have been done in this repo, but `picocli` hasn't been
 added!
 
-- [x] Add the `picocli` dependency to the `pom.xml` file
+- [ ] Add the `picocli`
+      [dependency](https://tech-docs.corndel.com/java/creating-projects.html#adding-dependencies)
+      to the `pom.xml` file
 
 - [x] Run `./mvnw clean compile`
 
@@ -49,7 +51,7 @@ specifications:
 > command
 >
 > ```bash
-> ./mvnw -q exec:java -Dexec.mainClass="com.corndel.supportbank.exercises.HelloWorld"
+> ./mvnw exec:java -Phelloworld
 > ```
 
 - [x] Run `./mvnw test -DTest="D1E2Test"` to check it's right, then commit and
@@ -72,7 +74,7 @@ specifications:
 > You can debug your CLI with arguments by running a command like
 >
 > ```bash
-> ./mvnw -q exec:java -Dexec.mainClass="com.corndel.supportbank.exercises.HelloWorld" -Dexec.args="Alice"
+> ./mvnw exec:java -Phelloworld -Dexec.args="Alice"
 > ```
 
 ## Exercise 4: Attaching a subcommand
