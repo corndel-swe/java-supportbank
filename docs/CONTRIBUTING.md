@@ -36,3 +36,11 @@ Only exercises currently have tests - if you have any spare time in the
 workshops, feel free to add more!
 
 If you enjoy TDD, you could certainly use this methodology during the workshops.
+
+## General advice
+
+This is quite an open-ended project and there are many different ways to solve
+it. Try not to think about your code "right or wrong" but imagine this will be
+used by real people and you are trying to give them useful features with a good
+user experience. If there is something else you want to add or do in a different
+way, go ahead!
