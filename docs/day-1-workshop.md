@@ -135,3 +135,29 @@ supportbank bill split 100 4 --tip 15
   investment each year during its whole term?
 
 - Could your tax calculator optionally incorporate student loans?
+
+## Hints
+
+### Map
+
+In Java, we can make a simple key value store like this:
+
+```java
+var map = Map.of("a", 1, "b", 2);
+
+map.get("a"); // 1
+map.get("b"); // 2
+```
+
+This could be useful for storing rates or symbols, for example:
+
+```java
+var symbols = Map.of(
+  "GBP", "£",
+  "EUR", "€",
+  "USD", "$",
+  "JPY", "¥",
+  "AUD", "A$");
+
+var str = symbols.get("EUR") + 2.75 // €2.75
+```
