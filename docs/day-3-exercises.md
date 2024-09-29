@@ -56,4 +56,5 @@ In this exercise, we'll be fetching data from the
 See if you can get a list of pokemon back from the API, and map it into a java
 `List` of `Pokemon` objects.
 
-There is a note on parsing lists of JSON [here](pokeAPI.java).
+There is a note on parsing lists of JSON
+[here](https://tech-docs.corndel.com/java/working-with-json.html#json-lists).
