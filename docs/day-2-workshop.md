@@ -17,13 +17,16 @@ Use a class for each type of object you want to create.
 
 You should add two commands:
 
-- [ ] `supportbank transaction summarise` – should output the names of each
-      person, and their current balance according to `Transactions2014.csv`.
+- [ ] `supportbank transaction summarise <filename>` – should output the names
+      of each person, and their current balance according to te given file, e.g.
+      `Transactions2014.csv`.
 
-- [ ] `supportbank transaction list <account name>` – should print a list of
-      every transaction, with the date and narrative, for that person’s account.
-      For example, `supportbank transaction list "jon a"` would list all of Jon
-      A’s transactions.
+- [ ] `supportbank transaction list <filename> <account name>` – should print a
+      list of every transaction, with the date and narrative, for that person’s
+      account. For example, `supportbank transaction list "jon a"` would list
+      all of Jon A’s transactions.
+
+Your main task is to make the above commands work with `Transactions2014.csv`.
 
 ## Extensions
 
@@ -34,7 +37,7 @@ may crop up.
 
 ## Hints
 
-### Map
+### HashMap
 
 You could use a `HashMap` to keep track of the user accounts. For example,
 
@@ -51,15 +54,6 @@ accounts.put(username, newBalance);
 There is a note on
 [working with CSV](https://tech-docs.corndel.com/java/file-io.html#csv) which
 will give you some ideas about using split and join to deal with rows of CSV.
-
-### Removing the CSV header
-
-There are a number of ways we could remove the header row from the CSV. For
-example,
-[`.remove(0)`](https://tech-docs.corndel.com/java/lists.html#arraylist-methods)
-or
-[`.sublist()`](https://tech-docs.corndel.com/java/list-techniques.html#sublists)
-could be used.
 
 ### JSON lists
 
