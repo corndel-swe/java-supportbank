@@ -15,7 +15,7 @@ You should then be able to find your App ID in the dashboard. Add it to your
 `.env` file. For example,
 
 ```
-OPENEXCHANGERATES_APP_ID=your_app_id_here
+OPEN_EXCHANGE_RATES_APP_ID=your_app_id_here
 ```
 
 Make sure that your `.env` file is added to the `.gitignore` file so that it
@@ -23,7 +23,7 @@ doesn't get committed! It's important for security to keep your API key secret.
 
 ## Part 2: Fetching the exchange rates
 
-You can use the Open Exchange Rates API to get the latest exchange rates.
+Use the Open Exchange Rates API to get the latest exchange rates.
 
 You can read an introduction to their api
 [here](https://docs.openexchangerates.org/reference/api-introduction).
