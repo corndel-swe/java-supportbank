@@ -54,6 +54,10 @@ Feel free to hard-code the
 [exchange rates](https://www.google.com/search?q=1+usd+to+gbp) for now. We'll
 improve this in a later workshop.
 
+> [!TIP]
+>
+> See the hints at the bottom of this file.
+
 ## Investment calculator
 
 Our users might want an investment calculator.
