@@ -24,7 +24,7 @@ public class Postman {
    * @param id      The id of the message
    * @param content The content of the message
    *
-   * @return The response from the Postman Echo API
+   * @return The response body from the Postman Echo API
    */
   public static String echoMessage(int id, String content) {
     // TODO: Create a Message object with the given id and content
