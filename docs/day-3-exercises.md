@@ -51,6 +51,10 @@ In this exercise, we'll be fetching data from the
 - [ ] Return the body of the response directly, i.e. return a string of JSON
       rather than an object.
 
+> [!WARNING]
+>
+> Make sure to set the Content-Type header to application/json
+
 ## Extension
 
 See if you can get a list of pokemon back from the API, and map it into a java
