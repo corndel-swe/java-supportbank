@@ -37,7 +37,7 @@ and print a message in the console to say each person owes £20.
 > [!TIP]
 >
 > Consider making a `Bill` class with a `total` property and a
-> `split(numPeople)` property.
+> `split(numPeople)` method.
 
 ## Currency converter
 
