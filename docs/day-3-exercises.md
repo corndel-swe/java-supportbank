@@ -5,15 +5,13 @@
 - [ ] Have a look at the documentation on
       [environment variables](https://tech-docs.corndel.com/java/environment-variables.html)
 
-- [ ] Add the `java-dotenv`
-      [dependency](https://tech-docs.corndel.com/java/environment-variables.html#reading-environment-variables)
-      to `pom.xml`
+- [ ] Create a `.env` file in the root of your project
 
 - [ ] Add the following environment variable:
 
-      ```
-      SECRET_PASSWORD=opensesame
-      ```
+```
+SECRET_PASSWORD=opensesame
+```
 
 - [ ] Test, commit and push!
 
