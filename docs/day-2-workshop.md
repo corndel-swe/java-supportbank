@@ -18,7 +18,7 @@ Use a class for each type of object you want to create.
 You should add two commands:
 
 - [ ] `supportbank transaction summarise <filename>` – should output the names
-      of each person, and their current balance according to te given file, e.g.
+      of each person, and their current balance according to the given file, e.g.
       `Transactions2014.csv`.
 
 - [ ] `supportbank transaction list <filename> <account name>` – should print a
