@@ -21,7 +21,7 @@ In this exercise, we'll be fetching data from the
 [PokeAPI](https://pokeapi.co/docs/v2).
 
 - [ ] Have a look at the documentation on
-      [fetching data](https://tech-docs.corndel.com/java/fetching-data.html).
+      [fetching data](https://tech-docs.corndel.com/java/http-get.html).
 
 - [ ] Open `exercises/pokeAPI.java`.
 
